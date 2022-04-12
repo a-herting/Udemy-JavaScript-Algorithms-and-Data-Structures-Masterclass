@@ -62,61 +62,67 @@ Contains the work I did while taking the JavaScript Algorithms and Data Structur
 
  - **Queues**(linked list implementation):
 	 - Linked list that is bidirectional. Contains a head, tail, and previous nodes.
-		 - **enqueue**(val): Function accepts a value and creates a new node. If there is no node in the queue, set the first and last to the newNode, set this.last to new node. Increment queue size and return size.
+		 - **enqueue**(val): Function accepts a value and creates a new node. If there is no node in the queue, set the first and last to the new Node, set this.last to new node. Increment queue size and return size.
 		 - **dequeue**( ): If there are no nodes in the queue, return null, else create a temp variable to store the 1st property on queue. If there is only 1 node, set the last property to be null. If there is more than one node, set the first property to be the next property on the current first. Decrement size of stack, and return the removed node. 
 		
 - **Binary Search Trees**:
 	 -Node based binary tree data structure where left sub-tree always contains values that are less than node key, and right sub-tree always contains value that are large than node key. 
 		 
-- [ ]  **insert**  (value): Function accepts a value and creates a new node. If there is no node in the tree, set this node to be this.root. Return the tree. Else, set current variable to be the root. Use the while loop that checks the following:
-	 -  **IF** input value is equal to current.value, return undefined
-	 - **IF** input value is less than current value, 
-		 - **IF** current.left does not exist, then set current.left to new node, **ELSE** set current to be current.left. 
-	 - **IF** input value is greater than current value, 
-		 - **IF** current.right does not exist, then set current.right to new node, **ELSE** set current to be current.right.
+	- [ ]  **insert**  (value): Function accepts a value and creates a new node. If there is no node in the tree, set this node to be this.root. Return the tree. Else, set current variable to be the root. Use the while loop that checks the following:
+		 -  **IF** input value is equal to current.value, return undefined
+		 - **IF** input value is less than current value, 
+			 - **IF** current.left does not exist, then set current.left to new node, **ELSE** set current to be current.left. 
+		 - **IF** input value is greater than current value, 
+			 - **IF** current.right does not exist, then set current.right to new node, **ELSE** set current to be current.right.
 
 		
 
- - [ ] **find** (value): If there are no nodes in the tree, return null. Create a current variable to store the root. Create another variable found and set it to false. In a while loop, while current exists and found is false, check the following:
-	 - **IF** value is less than current.value, then set current to current.left. 
-	 - **ELSEIF** value is greater than current.value, then set current to current.right.
-	 - **ELSE** found is set to true.
+ 	- [ ] **find** (value): If there are no nodes in the tree, return null. Create a current variable to store the root. Create another variable found and set it to false. In a while loop, while current exists and found is false, check the following:
+		 - **IF** value is less than current.value, then set current to current.left. 
+		 - **ELSEIF** value is greater than current.value, then set current to current.right.
+		 - **ELSE** found is set to true.
 **Outside of while loop**:
-	 - ** IF** found is false, return undefined.
-	- Return current. 
+		 - ** IF** found is false, return undefined.
+		- Return current. 
 		
- - [ ] **Breadth First Search Pseudocode**
-	- Create a queue and an array to store the values of nodes visited
-	- Place the root node in the queue
-	- Loop while there is anything in the queue
-	- Dequeue/shift a node from the queue and push the value of the node into the variable that stores the node
-	- If there is a left property on node recently pushed, add it to queued
-	- If there is a right property on node recently pushed, add it to queued
+ 	- [ ] **Breadth First Search Pseudocode**
+		- Create a queue and an array to store the values of nodes visited
+		- Place the root node in the queue
+		- Loop while there is anything in the queue
+		- Dequeue/shift a node from the queue and push the value of the node into the variable that stores the node
+		- If there is a left property on node recently pushed, add it to queued
+		- If there is a right property on node recently pushed, add it to queued
 	- Return the data array
- - [ ] **DFS - Preorder Pseudocode - Steps Recursively**
-	 - Create an array to store the values of nodes visited
-	 - Store the root of the BST in a variable called current
-	 - Write a helper function (traverse) which accepts a node
-	 - Push the value of the node to the data array.
-	 -  If the node has a left property, call the helper function with the left property on the node
-	 - If the node has a right property, call the helper function with the right property on the node
-	 - Call the helper function with the current node.
-	 - Return the data array.
- - [ ] **DFS -PostOrder Pseudocode - Steps Recursively**
-	 - Create an array to store the values of nodes visited
-	 - Store the root of the BST in a variable called current
-	 - Write a helper function (traverse) which accepts a node
-	 -  If the node has a left property, call the helper function with the left property on the node
-	 - If the node has a right property, call the helper function with the right property on the node
-	 - Push the value of the node to the data array.
-	 - Call the helper function with the current node.
-	 - Return the data array.
- - [ ] **DFS In Order**
-	 - Create an array to store the values of nodes visited
-	 - Store the root of the BST in a variable called current
-	 - Write a helper function (traverse) which accepts a node
-	 -  If the node has a left property, call the helper function with the left property on the node
+ 	- [ ] **DFS - Preorder Pseudocode - Steps Recursively**
+		 - Create an array to store the values of nodes visited
+		 - Store the root of the BST in a variable called current
+		 - Write a helper function (traverse) which accepts a node
 		 - Push the value of the node to the data array.
-	 - If the node has a right property, call the helper function with the right property on the node
-	 - Call the helper function with the current node.
-	 - Return the data array.
+		 -  If the node has a left property, call the helper function with the left property on the node
+		 - If the node has a right property, call the helper function with the right property on the node
+		 - Call the helper function with the current node.
+		 - Return the data array.
+ 	- [ ] **DFS -PostOrder Pseudocode - Steps Recursively**
+		 - Create an array to store the values of nodes visited
+		 - Store the root of the BST in a variable called current
+		 - Write a helper function (traverse) which accepts a node
+		 -  If the node has a left property, call the helper function with the left property on the node
+		 - If the node has a right property, call the helper function with the right property on the node
+		 - Push the value of the node to the data array.
+		 - Call the helper function with the current node.
+		 - Return the data array.
+ 	- [ ] **DFS In Order**
+		 - Create an array to store the values of nodes visited
+		 - Store the root of the BST in a variable called current
+		 - Write a helper function (traverse) which accepts a node
+		 -  If the node has a left property, call the helper function with the left property on the node
+			 - Push the value of the node to the data array.
+		 - If the node has a right property, call the helper function with the right property on the node
+		 - Call the helper function with the current node.
+		 - Return the data array.
+	 
+ - **Hash Table**:
+	 - Data structure that stores data with an index, which can make accessing data faster if the index is known.
+	 
+	- [ ]  **set**  (key, value): Accepts a key and a value. Hashes the key. Stores the key-value pair in the hash table array via separate chaining
+	 - [ ] **get** (key, value): Accepts a key and a value. Hashes the key. Retrieves the key-value pair in the hash table. If the key isn't found, return undefined. 
