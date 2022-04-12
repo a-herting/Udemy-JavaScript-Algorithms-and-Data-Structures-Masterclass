@@ -59,3 +59,9 @@ Contains the work I did while taking the JavaScript Algorithms and Data Structur
 	 - Linked list that is bidirectional. Contains a head, tail, and previous nodes.
 		 - **push**( ): Function accepts a value and creates a new node. If there is no node in the stack, set the first and last to the newNode, else create a temp variable and set it equal to this.first then set this.first to newNode, then set newNode.next to be the temp variable then return size of stack. 
 		 - **pop**( ): If there are no nodes in the stack, return null, else create a temp variable to store the 1st property on stack. If there is only 1 node, set the first and last property to be null. If there is more than one node, set the first property to be the next property on the current first. Decrement size of stack, and return the removed node. 
+
+ - **Queues**(linked list implementation):
+	 - Linked list that is bidirectional. Contains a head, tail, and previous nodes.
+		 - **enqueue**(val): Function accepts a value and creates a new node. If there is no node in the queue, set the first and last to the newNode, set this.last to new node. Increment queue size and return size.
+		 - **dequeue**( ): If there are no nodes in the queue, return null, else create a temp variable to store the 1st property on queue. If there is only 1 node, set the last property to be null. If there is more than one node, set the first property to be the next property on the current first. Decrement size of stack, and return the removed node. 
+		
