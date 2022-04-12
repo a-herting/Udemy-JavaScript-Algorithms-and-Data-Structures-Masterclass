@@ -164,3 +164,6 @@ Contains the work I did while taking the JavaScript Algorithms and Data Structur
 				 - Mark the neighbor as visited.
 				 - Push the neighbor to the queue
 	 - Return results array.
+
+ - **Dijkstra's Algorithm:**
+	 - Used to search across the weighted graph using a priority queue. The goal is to find the shortest path between two vertices on a graph.
