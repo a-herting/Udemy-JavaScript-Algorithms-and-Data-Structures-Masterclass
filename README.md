@@ -126,3 +126,41 @@ Contains the work I did while taking the JavaScript Algorithms and Data Structur
 	 
 	- [ ]  **set**  (key, value): Accepts a key and a value. Hashes the key. Stores the key-value pair in the hash table array via separate chaining
 	 - [ ] **get** (key, value): Accepts a key and a value. Hashes the key. Retrieves the key-value pair in the hash table. If the key isn't found, return undefined. 
+ - **Graph**:
+	 - Non-linear data structure that is made of nodes (vertices) and edges (lines).
+	 - [ ]  **addVertex**  (vertex): Accepts a vertex. If vertex's location in list doesn't exists, then it adds an empty array to that location.
+	- [ ]  **addEdge**  (v1, v2): Accepts a v1 and v2. If v1 location in list exists, then push v2 into v1. If v2 location in list exists, then push v1 into v2.
+	 - [ ] **removeEdge** (vertex1, vertex2): Accepts vertex 1 and 2. The edge is removed by setting the adjacency list of vertex1 equal to the filtered result of the list without vertex2. The same is done for vertex 2. 
+	 - [ ]  - [ ] **removeVertex** (vertex): Accepts vertex. A while loop loops as long as there is anything in the vertex array ad uses the pop method to remove the vertex from the array and calls the removeEdge method to remove the presence of this vertex in other arrays.
+	 - [ ] **DFS Pseudocode Recursive** (start): 
+	
+		 - Accepts a starting value.   
+		 - If vertex is empty, return (this is base case). 
+		 - Add vertex to results list. Mark vertex as visited. 
+		 - For each neighbor in vertex's neighbors: 
+			 - if neighbor is not visited:
+				 - recursively call DFS on neighbor.
+	 - [ ] **DFS Pseudocode Iterative**(start):
+		 - Let S be a stack
+		 - Push start to S stack
+		 - While S stack is not empty
+			 - currentVertex = S.pop()
+			 - Push current Vertex to results array.
+			 - For each neighbor of currentVertex:
+				 - if vertex is not labeled as visited:
+					 - Mark vertex as visited
+					 - Push vertex to stack.
+		 - Return the result array.
+ - [ ] **Breadth First Pseudocode** (start): 
+	 -  Accepts a starting vertex. 
+	 - Create a queue (you can use an array) and place the starting vertex in it.
+	 - Create an results array to store all of the nodes visited
+	 - Create an object to store visited nodes
+	 - While there is anything in the queue:
+		 - Set currentVertex to queue.shift()
+		 - Push that vertex to the results array.
+		 - For each neighbor in vertex's neighbors: 
+			 - if neighbor is not visited:
+				 - Mark the neighbor as visited.
+				 - Push the neighbor to the queue
+	 - Return results array.
