@@ -4,13 +4,17 @@ class Graph {
   constructor() {
     this.adjacencyList = {};
   }
-
+  
+//Accepts a vertex. If vertex's location in list doesn't exists, 
+//then it adds an empty array to that location.
   addVertex(vertex) {
     if (!this.adjacencyList[vertex]) {
       this.adjacencyList[vertex] = [];
     }
   }
 
+  //Accepts a v1 and v2. If v1 location in list exists, then 
+  //push v2 into v1. If v2 location in list exists, then push v1 into v2.
   addEdge(v1, v2) {
     if (this.adjacencyList[v1]) {
       this.adjacencyList[v1].push(v2);
@@ -20,7 +24,9 @@ class Graph {
       this.adjacencyList[v2].push(v1);
     }
   }
-
+//Accepts vertex 1 and 2. The edge is removed by setting the 
+//adjacency list of vertex1 equal to the filtered result of 
+//the list without vertex2. The same is done for vertex 2. 
   removeEdge(vertex1, vertex2) {
     this.adjacencyList[vertex1] = this.adjacencyList[vertex1].filter(
       (v) => v !== vertex2
@@ -30,7 +36,9 @@ class Graph {
       (v) => v !== vertex1
     );
   }
-
+//Accepts vertex. A while loop loops as long as there is anything in the 
+//vertex array ad uses the pop method to remove the vertex from the array 
+//and calls the removeEdge method to remove the presence of this vertex in other arrays.
   removeVertex(vertex) {
     let i = 0;
 
